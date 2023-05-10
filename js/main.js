@@ -1,9 +1,9 @@
 /*
 Consegna
 
-    1x) Copiamo la griglia fatta ieri nella nuova repo e aggiungiamo la logica del gioco
+    1) Copiamo la griglia fatta ieri nella nuova repo e aggiungiamo la logica del gioco
 
-    2x) Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe.
+    2) Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe.
     Attenzione: nella stessa cella può essere posizionata al massimo una bomba, perciò nell’array delle bombe non potranno esserci due numeri uguali.
     
     3) (3.1) In seguito l’utente clicca su una cella: se il numero è presente nella lista dei numeri generati - abbiamo calpestato una bomba - la cella si colora di rosso (3.2) e la partita termina.
@@ -15,9 +15,11 @@ Consegna
 
 BONUS:
 
-    Aggiungere una select accanto al bottone di generazione, che fornisca una scelta tra tre diversi livelli di difficoltà: - difficoltà 1 ⇒ 100 caselle, con un numero compreso tra 1 e 100, divise in 10 caselle per 10 righe; - difficoltà 2 ⇒ 81 caselle, con un numero compreso tra 1 e 81, divise in 9 caselle per 9 righe; - difficoltà 3 ⇒ 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
-    Quando si clicca su una bomba e finisce la partita, evitare che si possa cliccare su altre celle;
-    Quando si clicca su una bomba e finisce la partita, il software scopre tutte le bombe nascoste.
+    1) Aggiungere una select accanto al bottone di generazione, che fornisca una scelta tra tre diversi livelli di difficoltà: - difficoltà 1 ⇒ 100 caselle, con un numero compreso tra 1 e 100, divise in 10 caselle per 10 righe; - difficoltà 2 ⇒ 81 caselle, con un numero compreso tra 1 e 81, divise in 9 caselle per 9 righe; - difficoltà 3 ⇒ 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
+
+    2) Quando si clicca su una bomba e finisce la partita, evitare che si possa cliccare su altre celle;
+
+    3) Quando si clicca su una bomba e finisce la partita, il software scopre tutte le bombe nascoste.
 
 */
 
