@@ -39,7 +39,7 @@ start.onclick = function() {
     
     const number = numberList(difficultyLvlValue);
     
-    const bombArray = arrayOfRandomNumber (1, 16);
+    const bombArray = arrayOfRandomNumber (1, difficultyLvlValue);
     
     console.log(bombArray);
 
@@ -108,7 +108,7 @@ function arrayOfRandomNumber (min, max) {
 
     const containerNum = [];
 
-    while ((containerNum.length) < max - min + 1) {
+    while ((containerNum.length) < 16) {
         
         const nuovoNum = Math.floor(Math.random() * (max - min + 1) + min);
 
