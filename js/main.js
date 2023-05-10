@@ -35,17 +35,26 @@ start.onclick = function() {
     
     // variabili
 
-    const punteggio = [];
-    
-    let difficultyLvlValue = getTheDifficulty();
-    
-    let classNumberSquare = "square-" + difficultyLvlValue;
-    
-    const number = numberList(difficultyLvlValue);
-    
-    const bombArray = arrayOfRandomNumber (1, difficultyLvlValue);
-    
-    console.log(bombArray);
+        // array per tenere conto del punteggio
+        const punteggio = [];
+        
+        // numero usato per definire la grandezza della griglia
+        let difficultyLvlValue = getTheDifficulty();
+        
+        // variabile per scegliere la difficoltà del livello
+        let classNumberSquare = "square-" + difficultyLvlValue;
+
+        // numero bombe il giocatore vuole
+        let utBombs = parseInt(prompt("quante bombe vuoi? tra 1 e " + (difficultyLvlValue - 1)));
+        
+        // valori delle celle
+        const number = numberList(difficultyLvlValue);
+        
+        // valori delle celle con bombe
+        const bombArray = arrayOfRandomNumber (1, difficultyLvlValue, utBombs);
+        
+        // debug
+        console.log(bombArray);
 
     
 
@@ -99,7 +108,7 @@ start.onclick = function() {
                     
                 }
 
-                if (punteggio.length > difficultyLvlValue - 17) {
+                if (punteggio.length > difficultyLvlValue - utBombs) {
                     
                     alert("you won");
 
@@ -125,15 +134,17 @@ start.onclick = function() {
 
 // funzioni
 
+// funzioni per generare valori casuali
 function randomNumber (minNum, maxNum) {
     return Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
 }
 
-function arrayOfRandomNumber (min, max) {
+// funzione per generare un container di valori casuali compreso tra min e max, contenente un tot di elementi
+function arrayOfRandomNumber (min, max, tot) {
 
     const containerNum = [];
 
-    while ((containerNum.length) < 16) {
+    while ((containerNum.length) < tot) {
         
         const nuovoNum = Math.floor(Math.random() * (max - min + 1) + min);
 
@@ -149,6 +160,7 @@ function arrayOfRandomNumber (min, max) {
 
 }
 
+// funzione per creare un elemento html con classe
 function createSquare(tagType, classToAdd) {
     
     const newSquare = document.createElement(tagType);
