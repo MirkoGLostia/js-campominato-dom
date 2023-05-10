@@ -1,0 +1,128 @@
+/*********
+ *GENERAL*
+ *********/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #7fffd4;
+}
+
+
+
+
+/********
+ *HEADER*
+ ********/
+
+#head-container {
+    background-color: #ffffff;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#head-logo {
+    font-size: 50px;
+    margin: 20px;
+}
+
+#head-choices {
+    margin: 20px;
+    font-size: 40px;
+}
+
+#head-choices > select, button {
+    margin: 10px;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+/******
+ *MAIN*
+ ******/
+
+#main-container {
+    height: calc(100vh - 150px);
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+#game-container {
+    border: 2px solid black;
+    margin: 100px auto;
+    width: 500px;
+    height: 500px;
+}
+
+.square-100 {
+    border: 2px solid black;
+    float: left;
+    width: 10%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.square-81 {
+    border: 2px solid black;
+    float: left;
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.square-49 {
+    border: 2px solid black;
+    float: left;
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.bk-blue {
+    background-color: blue;
+}
+
+
+
+
+
+
+/********
+ *FOOTER*
+ ********/
+
+#foot-container {
+    background-color: white;
+    height: 50px;
+}
+
+#foot-container > div {
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+
+
+
+
+
