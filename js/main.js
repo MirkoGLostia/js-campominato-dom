@@ -32,6 +32,8 @@ const gameTable = document.getElementById("game-container");
 start.onclick = function() {
     
     // variabili
+
+    const punteggio = [];
     
     let difficultyLvlValue = getTheDifficulty();
     
@@ -42,6 +44,8 @@ start.onclick = function() {
     const bombArray = arrayOfRandomNumber (1, difficultyLvlValue);
     
     console.log(bombArray);
+
+    
 
 
 
@@ -83,14 +87,21 @@ start.onclick = function() {
 
                     this.classList.add("bk-red");
 
-                    alert("KABOOM");
+                    alert("Hai fatto: " + punteggio.length);
                     
                 } else {
 
                     this.classList.add("bk-blue");
+
+                    punteggio.push("I");
                     
                 }
 
+                if (punteggio.length > difficultyLvlValue - 17) {
+                    
+                    alert("you won");
+
+                }
                 
             }
         
