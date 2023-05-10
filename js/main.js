@@ -87,7 +87,7 @@ start.onclick = function() {
         // interazione con i quadrati
         squareContainer.addEventListener("click", 
         
-            function () {
+            function playerChoiceEvent () {
                 
                 this.classList.add("focus");
                 
@@ -97,14 +97,20 @@ start.onclick = function() {
                 if (bombArray.includes(thisSquare)) {
 
                     this.classList.add("bk-red");
-
+                    
                     alert("Hai fatto: " + punteggio.length);
                     
-                } else {
+                } 
+                else {
 
                     this.classList.add("bk-blue");
 
-                    punteggio.push("I");
+                    if (!punteggio.includes(thisSquare)) {
+                        
+                        punteggio.push(thisSquare);
+                        
+                    }
+                    
                     
                 }
 
@@ -114,7 +120,9 @@ start.onclick = function() {
 
                 }
                 
+                
             }
+
         
         )
 
