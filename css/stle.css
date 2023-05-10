@@ -98,12 +98,20 @@ body {
     cursor: pointer;
 }
 
+.covered {
+    display: none;
+}
+
 .bk-blue {
     background-color: blue;
 }
 
 .bk-red {
     background-color: red;
+}
+
+.focus {
+    display: inline-block;
 }
 
 

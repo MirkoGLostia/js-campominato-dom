@@ -1,13 +1,13 @@
 /*
 Consegna
 
-    1) Copiamo la griglia fatta ieri nella nuova repo e aggiungiamo la logica del gioco
+    1x) Copiamo la griglia fatta ieri nella nuova repo e aggiungiamo la logica del gioco
 
-    2) Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe.
+    2x) Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe.
     Attenzione: nella stessa cella può essere posizionata al massimo una bomba, perciò nell’array delle bombe non potranno esserci due numeri uguali.
     
-    3) In seguito l’utente clicca su una cella: se il numero è presente nella lista dei numeri generati - abbiamo calpestato una bomba - la cella si colora di rosso e la partita termina.
-    Altrimenti la cella cliccata si colora di azzurro e l’utente può continuare a cliccare sulle altre celle.
+    3) (3.1) In seguito l’utente clicca su una cella: se il numero è presente nella lista dei numeri generati - abbiamo calpestato una bomba - la cella si colora di rosso (3.2) e la partita termina.
+    (1.0) Altrimenti la cella cliccata si colora di azzurro e l’utente può continuare a cliccare sulle altre celle.
 
     4) La partita termina quando il giocatore clicca su una bomba o quando raggiunge il numero massimo possibile di numeri consentiti (ovvero quando ha rivelato tutte le celle che non sono bombe).
 
@@ -59,7 +59,7 @@ start.onclick = function() {
         
         const squareContainer = createSquare ("div", classNumberSquare);
         
-        const squareContent = document.createElement("span");
+        const squareContent = createSquare("span", "covered");
         
         squareContent.append(number[i]);
         
@@ -74,11 +74,23 @@ start.onclick = function() {
         
             function () {
                 
-                this.classList.add("bk-blue");
+                this.classList.add("focus");
+                
+                const thisSquare = document.querySelector("div.focus span").value = number[i];
 
-                const thisSquare = document.querySelector("div.bk-blue span").value = number[i];
 
-                console.log(thisSquare);
+                if (bombArray.includes(thisSquare)) {
+
+                    this.classList.add("bk-red");
+
+                    alert("KABOOM");
+                    
+                } else {
+
+                    this.classList.add("bk-blue");
+                    
+                }
+
                 
             }
         
